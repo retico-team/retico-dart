@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools==70", "setuptools-scm[simple]>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retico-dart"
+dynamic = ["version"]
+dependencies = [
+    "retico-core>=2.0.0",
+    "retico-vision",
+    "torch>=2.0",
+    "numpy",
+    "Pillow",
+    # DART / SAM3 -- replace with the real repo URL:
+    # "sam3 @ git+<URL-of-the-DART-sam3-repo>",
+]
+requires-python = ">=3.10, <4"
+description = "Retico module for real-time open-vocabulary object detection with DART"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = [
+    "retico",
+    "framework",
+    "incremental",
+    "dart",
+    "sam3",
+    "vision",
+    "object detection",
+    "open vocabulary"
+]
+classifiers = [
+        "Development Status :: 2 - Pre-Alpha",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
+    ]
+
+[project.optional-dependencies]
+# Optical-flow tracking for the live overlay
+overlay = ["opencv-python"]
+# TensorRT engines (trt_backbone_engine / trt_enc_dec_engine)
+trt = ["tensorrt"]

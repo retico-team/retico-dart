@@ -679,7 +679,7 @@ class LabeledConvert(Convert_DetectedObjectsIU_ImageIU):
     placeholder, when labels are available.
 
     Overlay-aware, so the SAME runner works whether DartModule uses
-    overlay=True or overlay=False (webcam -> DART -> LabeledConvert -> screen):
+    overlay=True or overlay=False:
       * overlay=False: draws DART's detections on the frame DART looked at.
       * overlay=True:  DART already sends live frames with the boxes drawn, so
         those are passed straight through and the (flagged) detections are
