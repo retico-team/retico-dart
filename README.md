@@ -7,6 +7,9 @@ DART needs ~200 ms per frame at `imgsz=1008`, so it runs inference on a backgrou
 
 To use the DART module you first need to install the retico-dart package:
 * Install retico-dart:
+```pip install retico-dart```
+
+or, for the latest development version from GitHub:
 ```pip install git+https://github.com/retico-team/retico-dart.git```
 
 DART depends on the `sam3` package (SAM 3 with the DART multi-class predictor). If it isn't pulled in automatically, install it manually:
@@ -18,7 +21,7 @@ For the live overlay's motion tracking you also need OpenCV. Without it the over
 ```pip install opencv-python```
 
   or install retico-dart with the overlay extra:
-```pip install "retico-dart[overlay] @ git+https://github.com/retico-team/retico-dart.git"```
+```pip install "retico-dart[overlay]"```
 
 ### Hardware
 * A CUDA GPU is strongly recommended. DART falls back to CPU, but it will be far too slow for real time.
